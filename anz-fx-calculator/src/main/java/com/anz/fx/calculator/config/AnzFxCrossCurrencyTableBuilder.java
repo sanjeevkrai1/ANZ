@@ -3,9 +3,19 @@ package com.anz.fx.calculator.config;
 import com.anz.fx.calculator.costants.AnzFxConstants;
 import com.anz.fx.calculator.costants.AnzFxCurrencies;
 
+/**
+ * In order to help with the conversion, Configurtion of "cross-via" matrix may help. 
+ * "Base" currencies are down the left, "terms" currencies across the top.
+ * @author Sanjeev Rai
+ *
+ */
 public class AnzFxCrossCurrencyTableBuilder {
     static String[][] crossCurrencytable = null;
 
+    /**
+     *  Build Cross-via matrix
+     * @return String [][]
+     */
     public static String[][] build() {
 
         if (crossCurrencytable == null) {

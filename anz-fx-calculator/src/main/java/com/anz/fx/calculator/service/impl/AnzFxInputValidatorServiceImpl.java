@@ -4,7 +4,22 @@ import com.anz.fx.calculator.costants.AnzFxCurrencies;
 import com.anz.fx.calculator.model.AnzFxValidationResult;
 import com.anz.fx.calculator.service.AnzFxInputValidatorService;
 
+
+/**
+ * 
+ * @author Sanjeev Rai
+ *  AnzFxInputValidatorServiceImpl validate the input enter from console.
+ *  
+ */
 public class AnzFxInputValidatorServiceImpl implements AnzFxInputValidatorService {
+	
+	/**
+	 * validating input 
+	 * As per input return the result 
+	 * If string is valid then it will return "Success" or it will return "Invalid input"
+	 * @return AnzFxValidationResult
+	 */
+	
     @Override
     public AnzFxValidationResult validate(String input) {
         AnzFxValidationResult result = new AnzFxValidationResult();

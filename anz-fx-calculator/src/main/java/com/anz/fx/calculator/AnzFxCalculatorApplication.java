@@ -6,7 +6,11 @@ import com.anz.fx.calculator.service.impl.AnzFxCurrencyConvertServiceImpl;
 import com.anz.fx.calculator.service.impl.AnzFxCurrencyFormatterServiceImpl;
 import com.anz.fx.calculator.service.impl.AnzFxInputValidatorServiceImpl;
 import com.anz.fx.calculator.view.AnzFxCureencyConversionConsole;
-
+/**
+ * 
+ * @author Sanjeev Rai
+ * Main Class to start console based application
+ */
 public class AnzFxCalculatorApplication {
 
 	private AnzFxCurrencyConvertService anzFxCurrencyConvertService;
@@ -24,6 +28,11 @@ public class AnzFxCalculatorApplication {
 
 	
 	
+	/**
+	 * Initializing the FX-Calculator Config
+	 * 
+	 * @throws Exception
+	 */
 	public void initFxCalculatorConfig() throws Exception {
         AnzFxCurrencyConverterConfig anzFxCurrencyConverterConfig = new AnzFxCurrencyConverterConfig();
         anzFxCurrencyConvertService = new AnzFxCurrencyConvertServiceImpl(
@@ -31,6 +40,9 @@ public class AnzFxCalculatorApplication {
 
     }
 
+	/**
+	 * Starting FX calculator
+	 */
     public void startFxCalculator() {
         new AnzFxCureencyConversionConsole(anzFxCurrencyConvertService, new AnzFxInputValidatorServiceImpl(), new AnzFxCurrencyFormatterServiceImpl()).currencyConversionOutput();
     }

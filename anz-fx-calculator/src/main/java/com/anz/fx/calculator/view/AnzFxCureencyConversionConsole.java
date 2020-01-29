@@ -9,6 +9,12 @@ import com.anz.fx.calculator.service.AnzFxCurrencyConvertService;
 import com.anz.fx.calculator.service.AnzFxCurrencyFormatterService;
 import com.anz.fx.calculator.service.AnzFxInputValidatorService;
 
+/**
+ * AnzFxCureencyConversionConsole application to take input on console
+ * And convert in target currency 
+ * @author Sanjeev Rai
+ *
+ */
 public class AnzFxCureencyConversionConsole {
     private AnzFxCurrencyConvertService currencyConverterService;
     private AnzFxInputValidatorService inputValidatorService;
@@ -20,6 +26,10 @@ public class AnzFxCureencyConversionConsole {
         this.outputFormatterService = outputFormatterService;
     }
 
+    
+    /**
+     * Currency console output method,
+     */
     public void currencyConversionOutput() {
         System.out.println("Enter input in the format \"<ccy1> <amount1> in <ccy2>\"");
         String input = currencyConversionInput();
@@ -37,7 +47,13 @@ public class AnzFxCureencyConversionConsole {
             input = currencyConversionInput();
         }
     }
+    
+    
     @SuppressWarnings("resource")
+    /**
+     * Input with scanner from console
+     * @return String (in upper case)
+     */
 	private String currencyConversionInput(){
         Scanner in = null;
         if(in == null){

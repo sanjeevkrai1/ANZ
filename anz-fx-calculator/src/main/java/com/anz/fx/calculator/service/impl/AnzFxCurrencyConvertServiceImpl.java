@@ -7,6 +7,14 @@ import com.anz.fx.calculator.costants.AnzFxCurrencies;
 import com.anz.fx.calculator.model.AnzFxCurrencyConversion;
 import com.anz.fx.calculator.service.AnzFxCurrencyConvertService;
 
+/**
+ * 
+ * @author Sanjeev Rai
+ * 
+ * AnzFxCurrencyConvertServiceImpl is a conversion service
+ * 
+ *
+ */
 public class AnzFxCurrencyConvertServiceImpl implements AnzFxCurrencyConvertService {
     private String[][] crossCurrencyTable;
     private Map<String, Double> currencyExchangeRates;
@@ -16,6 +24,11 @@ public class AnzFxCurrencyConvertServiceImpl implements AnzFxCurrencyConvertServ
         this.currencyExchangeRates = currencyExchangeRates;
     }
 
+    
+    /**
+     * convert one currency amount to another currency
+     * @return double
+     */
     @Override
     public double convert(AnzFxCurrencyConversion currencyConversionModel) {
         return calculate(currencyConversionModel.getBase(), currencyConversionModel.getTerms(), currencyConversionModel.getAmount());
